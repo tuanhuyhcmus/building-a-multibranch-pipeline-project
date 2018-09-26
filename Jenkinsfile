@@ -17,10 +17,22 @@ pipeline {
             }
         
         }
-        stage('Test') {
+        stage('Deliver for development') {
+            when {
+                branch 'development'
+            }
             steps {
-               echo "build master done"
+               echo "Deliver for development success "
             }
         }
+        stage('Deploy for production') {
+            when {
+                branch 'production'
+            }
+            steps {
+               echo "Deploy for production success"
+            }
+        }
+        
     }
 }
