@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
+              echo "ahuhu"
               echo "ahihi master"
               sh 'pwd'
             }
