@@ -33,6 +33,13 @@ pipeline {
                echo "Deploy for production success"
             }
         }
-        
+        stage('Build for master') {
+            when {
+                branch 'master'
+            }
+            steps {
+               echo "Build for master success"
+            }
+        }
     }
 }
